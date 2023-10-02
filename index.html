@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/assets/styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="tabs">
+                <div class="playlists-tab">Плейлисты</div>
+                <div class="tracks-tab active-tab">Треки</div>
+            </div>
+            <div class="playlists">
+                <div class="create-playlist">
+                    <span class="create-title create-btn">Создать новый плейлист</span>
+                </div>
+                <div class="playlist-content">
+                    <div class="created-playlists"></div>
+                    <div class="playlist-tracks"></div>
+                </div>
+            </div>
+            <div class="track-list">
+                <div class="upload-track create-btn">Добавить трек</div>
+                <div class="tracks"></div>
+            </div>
+        </div>
+        <div class="player">
+            <div class="track-line"></div>
+            <div class="player-panel">
+                <div class="track-info">
+                    <div class="info-name"></div>
+                    <div class="info-artist"></div>
+                </div>
+                <div class="track-options">
+                    <div class="track-loop"></div>
+                    <div class="track-random"></div>
+                </div>
+                <div class="player__actions">
+                    <div class="previous player-btn"></div>
+                    <div class="play player-btn"></div>
+                    <div class="pause player-btn"></div>
+                    <div class="next player-btn"></div>
+                </div>
+                <div class="volume-block">
+                    <span class="vol-icon"></span>
+                    <input class="volume" type="range" min="0" max="1" value="1" step="0.02">
+                </div>
+                <div class="time">
+                    <div class="current-time"></div>/
+                    <div class="whole-time"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper create-wrapper">
+        <div class="modal-create modal">
+            <form class="playlist-form">
+                <input type="text" class="playlist-name modal-input" placeholder="Введите название плейлиста">
+                <div class="choose-tracks"></div>
+                <button class="form-btn">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-wrapper upload-wrapper">
+        <div class="modal-upload modal">
+            <form class="track-form">
+                <input type="text" class="track-name modal-input" placeholder="Введите название трека">
+                <input type="text" class="track-artist modal-input" placeholder="Введите имя исполнителя">
+                <input type="file" class="uploader" accept=".mp3">
+                <button class="form-btn">Создать</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./src/js/main.js" type="module"></script>
+
+
+</html>
